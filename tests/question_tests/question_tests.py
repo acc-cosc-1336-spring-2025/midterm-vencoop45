@@ -4,6 +4,7 @@ import unittest
 #follow this example to add questions b, c, and d for testing including their functions
 from src.question_a.question_a import get_person_category
 from src.question_b.question_b import get_random_number
+from src.question_c.question_c import get_fahrenheit
 
 class Test_Config(unittest.TestCase):
 
@@ -15,3 +16,8 @@ class Test_Config(unittest.TestCase):
 
     def test_get_random_number(self):
         self.assertEqual(get_random_number)
+
+    def test_get_fahrenheit(self):
+        self.assertEqual(get_fahrenheit(0), 32)
+        self.assertEqual(get_fahrenheit(5), 41)
+        self.assertEqual(get_fahrenheit(10), 50)
