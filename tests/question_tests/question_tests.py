@@ -5,6 +5,7 @@ import unittest
 from src.question_a.question_a import get_person_category
 from src.question_b.question_b import get_random_number
 from src.question_c.question_c import get_fahrenheit
+from src.question_d.question_d import get_sum_of_evens
 
 class Test_Config(unittest.TestCase):
 
@@ -21,3 +22,8 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(get_fahrenheit(0), 32)
         self.assertEqual(get_fahrenheit(5), 41)
         self.assertEqual(get_fahrenheit(10), 50)
+
+    def test_get_sum_of_evens(self):
+        self.assertEqual(get_sum_of_evens(11), 30)
+        self.assertEqual(get_sum_of_evens(10), 30)
+        self.assertEqual(get_sum_of_evens(8), 20)
