@@ -9,6 +9,8 @@ def main():
             age = int(age_str)
             category = get_person_category(age)
             print(f"The individual is a(n) {category}.")
+        except ValueError as e:
+            print("Invalid input. Please enter a whole number for the age or 'quit'.")
 
 if __name__ == '__main__':
    main() 
